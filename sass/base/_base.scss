@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    
+    @include respond(tab-land){
+        font-size: 56.2%
+    }
+    @include respond(tab-port){
+        font-size: 50%
+    }
+}
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    padding: 3rem;
+    
+    @include respond(tab-port){
+        padding: 0rem;
+    }
+    
+}
+::selection{
+    background-color: $primary-color-light;
+    color: #fff;
+}

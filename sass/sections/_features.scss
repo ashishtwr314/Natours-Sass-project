@@ -1,0 +1,47 @@
+.features{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba($primary-color-dark,0.8), 
+                       rgba($primary-color-light,0.8) ), 
+                        url(../img/nat-4.jpg);
+     background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+    
+//     @media (min-resolution: 192dpi) and (min-width: 600px), 
+//            (min-width: 2000px){
+//        background-image: linear-gradient(to right bottom, rgba($primary-color-dark,0.8), 
+//                          rgba($primary-color-light,0.8) ), 
+//                          url(../img/nat-4.jpg);
+//    }
+    
+    & > *{
+        transform: skewY(7deg);
+    }   
+}
+.features-card{
+    text-align: center;
+    padding: 2.5rem 2rem; 
+    font-size: 1.5rem;
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+    background-color: rgba(255,255,255, 0.8);
+    transition: transform 0.2s;
+    
+   
+    
+    &__icon{
+        font-size: 6rem;
+        margin: 2rem 0;
+        display: inline-block;
+        
+       color: $primary-color-light;
+         @supports (  background-clip: text ){
+             background-clip: text ;
+             background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark );
+            color: transparent;
+         }
+    }
+    &:hover{
+        transform: translateY(-2rem) scale(1.03);
+    }
+}

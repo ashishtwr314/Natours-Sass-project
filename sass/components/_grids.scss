@@ -1,0 +1,62 @@
+.row{
+    
+    max-width: 114rem;
+    margin: 10px auto;    
+    @include clearfix;
+    
+    @include respond(tab-port){
+        max-width: 50rem;
+    }
+    @include respond(phone){
+        padding: 0 3rem;
+    }
+    .col{
+        float: left;
+        &:not(:last-child){
+            margin-right: $grid-gutter;
+        }
+    }
+    
+}
+.row--2col{
+    .col{
+        width: calc( (100% - #{$grid-gutter} )/2 ); 
+        @include respond(tab-port){
+            width: 100%;
+            margin: 3rem auto;
+        }
+    }
+     
+}
+.row--3col{
+    .col{
+        width: calc( (100% - #{$grid-gutter*2} )/3 ); 
+        @include respond(tab-port){
+            width: 100%;
+            margin: 3rem auto;
+        }
+    }
+      
+}
+.row--4col{
+    .col{
+        width: calc( (100% - #{$grid-gutter*3} )/4 ); 
+        
+        @include respond(tab-port){
+            width: 100%;
+            margin: 3rem auto;
+        }
+
+    }
+}
+.row--1-2col{
+    .col-1of3{
+        width: calc( (100% - #{$grid-gutter*2} )/3 ); 
+    }
+    .col-2of3{
+        width: calc( ( 2 * ( 100% - #{$grid-gutter*2} )/3) + #{$grid-gutter} )
+    }   
+}
+    
+    
+

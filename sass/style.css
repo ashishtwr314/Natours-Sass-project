@@ -1,0 +1,227 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  padding: 3rem; }
+
+@-webkit-keyframes fadeInfromLeft {
+  0% {
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem); }
+  100% {
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+    opacity: 1; } }
+
+@keyframes fadeInfromLeft {
+  0% {
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem); }
+  100% {
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInfromRight {
+  0% {
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem); }
+  100% {
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+    opacity: 1; } }
+
+@keyframes fadeInfromRight {
+  0% {
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    -webkit-transform: translateX(-1rem);
+    transform: translateX(-1rem); }
+  100% {
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInfromBottom {
+  0% {
+    -webkit-transform: translateY(5rem);
+    transform: translateY(5rem);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@keyframes fadeInfromBottom {
+  0% {
+    -webkit-transform: translateY(5rem);
+    transform: translateY(5rem);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@-webkit-keyframes fadeInandRotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@keyframes fadeInandRotate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+.btn:link,
+.btn:default {
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 10rem;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  position: relative; }
+  .btn:link:hover,
+  .btn:default:hover {
+    -webkit-transform: translateY(-0.5rem);
+    -ms-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:link:hover::after,
+    .btn:default:hover::after {
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+      opacity: 0; }
+  .btn:link::after,
+  .btn:default::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10rem;
+    z-index: -1;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s; }
+  .btn:link:active,
+  .btn:default:active {
+    -webkit-transform: translateY(0rem);
+    -ms-transform: translateY(0rem);
+    transform: translateY(0rem);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0); }
+
+.btn.btn--white {
+  color: red;
+  background-color: #fff; }
+  .btn.btn--white::after {
+    background-color: #fff; }
+
+.btn--animated {
+  -webkit-animation: fadeInfromBottom 0.4s linear 0.4s;
+  animation: fadeInfromBottom 0.4s linear 0.4s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(40, 180, 133, 0.8)), to(rgba(126, 213, 111, 0.8))), url(../img/hero.jpg);
+  background-image: -webkit-linear-gradient(left top, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
+  background-image: -o-linear-gradient(left top, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 70vh, 0% 100%);
+  background-position: center;
+  background-size: cover; }
+  .header__logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    -webkit-animation: fadeInandRotate 2s;
+    animation: fadeInandRotate 2s; }
+    .header__logo img {
+      height: 4rem; }
+  .header__hero-block {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center; }
+  .header .hero-text {
+    letter-spacing: 3rem;
+    text-transform: uppercase;
+    line-height: 1.7;
+    margin-bottom: 6rem; }
+    .header .hero-text span.big {
+      display: block;
+      font-size: 5rem;
+      -webkit-animation: fadeInfromLeft 2s ease-out;
+      animation: fadeInfromLeft 2s ease-out; }
+    .header .hero-text span.small {
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 1.3rem;
+      -webkit-animation: fadeInfromRight 2s ease-out;
+      animation: fadeInfromRight 2s ease-out; }
+
+.row {
+  background: red; }
+
+.row {
+  background: red; }

@@ -1,0 +1,110 @@
+
+.btn:link, 
+.btn:default,
+.btn{
+    font-family: inherit;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: transform 0.4s;
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    &:hover{
+       transform: translateY(-0.5rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        &::after{
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+    
+    &::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10rem;
+        z-index: -1;
+        transition: all 0.4s;
+    }
+    &:active{
+        transform: translateY(0rem);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0);
+    }
+    
+}
+
+.btn.btn--white{
+    color: $text-color-grey;
+    background-color: $hero-text-color-white;
+    &::after{
+        background-color: $hero-text-color-white;
+    }
+}
+.btn.btn--green{
+    color: $hero-text-color-white;
+    background-color: $primary-color;
+    &::after{
+        background-color: $primary-color;
+    }
+}
+.btn--animated{
+    animation: fadeInfromBottom 0.4s linear 0.4s;
+    animation-fill-mode: backwards;
+}
+
+
+.btn-sec{
+    &:link,
+    &:visited{
+        display: inline-block;
+        text-decoration: none;
+        color: $primary-color;
+        padding: 1rem;
+        font-size: 1.6rem;
+        transition: all 0.5s;
+        border-bottom: 1px solid $text-color-grey;
+    }
+        
+    &:hover{
+        background-color: $primary-color;
+        color: #fff;
+         box-shadow: 0 1rem 2rem rgba(0,0,0, 0.2);
+        transform: translateY(-2px);       
+        border-color: transparent;
+    }
+    &:active{
+         box-shadow: 0 .5rem 1rem rgba(0,0,0, 0.1);
+        transform: translateY(0px);       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

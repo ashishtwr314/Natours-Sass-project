@@ -1,0 +1,111 @@
+.about{
+    padding: 25rem 0;
+    margin-top: -25vh;
+    background-color: $light-grey-1;
+    
+}
+.heading-secondary{
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @supports ( background-clip: text ){
+         background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+         background-clip: text;
+         color: transparent;
+    }
+    color: $primary-color-light;
+   
+    transition: transform  0.5s, text-shadow 0.5s;
+    cursor: default;
+    &:hover{
+        transform: rotateY(10deg) rotateX(00deg);
+        text-shadow: 0 2rem 2rem #000;
+    }
+    
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+    @include respond(phone){
+        font-size: 2rem;
+    }
+}
+.heading-tertiary{
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-color-grey;
+}
+.paragraph{
+    color: $text-color-grey;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    &:not(:last-child){   
+        margin-bottom: 1.5rem;
+    }
+}
+
+.composition{
+    position: relative;
+    &__photo{
+        width: 55%;
+        position: absolute;        
+        transition: all 0.2s;
+        outline-offset: 1rem;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+        z-index: 1;
+        &--p1{
+            top: -2rem;   
+            left: 0;
+        }
+        &--p2{
+            right: 0;
+            top: 2rem;
+        }
+        &--p3{
+            left: 20%;
+            top: 10rem;
+        }
+        &:hover{
+            box-shadow: 0 2rem 4rem rgba(0,0,0,0.8);
+            transform: scale(1.05);
+            outline: 1.2rem solid $primary-color;
+            z-index: 2;
+        }
+    }
+    &:hover &__photo:not(:hover){
+        transform: scale(0.95);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

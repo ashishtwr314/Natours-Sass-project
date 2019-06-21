@@ -1,0 +1,30 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin respond($device){
+    
+    @if($device==phone){
+        @media (max-width: 37.5em){  // 600px (always use ems in Media Querry 1em=16px)
+            @content;
+        }
+    }
+    
+     @if($device==tab-port){
+        @media (max-width: 56.25em){ 
+            @content;
+        }
+    }
+    
+    @if($device==tab-land){
+        @media (max-width: 75em){
+            @content;
+        }
+    }
+    
+    
+}

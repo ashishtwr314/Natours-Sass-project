@@ -19,4 +19,11 @@
   </li>
 </ul>
 
+<img src="https://github.com/ashishtwr314/Natours-Sass-project/blob/master/Natours.png" alt="banner" />
+
+<b>Technologies Used: </b>  HTML5, CSS3, React.JS, JSX, Browser Fetch API
+
+<b>Live Preview </b> https://ashishtwr314.github.io/Natours-Sass-project/
+
+
 <h3>Highly Advanced stuff that can be a game changer for your life and take your frontend skills to a new level.</h3>
